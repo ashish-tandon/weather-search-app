@@ -1,0 +1,122 @@
+
+:root {
+    --bright-dark-color: #C63F25;
+    --light-color-2: #F5F5F5 ;
+    --bright-color: #3FADA8;
+    --blast-color: #f06449;
+    --dark-color: #36382e;
+    --default-font-family: "Jaldi", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, var(--blast-color) 0%, var(--blast-color) 50%, var(--dark-color) 50%, var(--dark-color) 100%);
+    color: var(--light-color-2)
+}
+
+
+p {
+    margin: 0;
+}
+
+footer {
+    margin: 20px;
+    padding: 4px 8px;
+    position: fixed; 
+    bottom: 0;
+    background-color: var(--dark-color);
+    border: 1px solid var(--blast-color)
+}
+
+
+.Top {
+    margin: 20px;
+}
+
+.Middle {
+    margin: 40px;
+}
+
+input {
+    margin: 2px;
+    padding: 1px;
+    padding-right:12px;
+    border-radius: 0px;
+    background-color: var(--light-color-2);
+    border: 1px solid var(--light-color-2);
+}
+
+input[type=button]{
+    position:absolute;
+    background-color: var(--bright-dark-color);
+    border: 1px solid var(--bright-dark-color);
+    padding: 1px 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex; justify-content: center; 
+}
+
+
+div .Antipodal {
+    transform: scale(-1,-1);
+}
+
+h2 {
+    margin: 5px 0 5px
+}
+
+.content-container {
+    flex-direction: row, column;
+}
+
+.antipode {
+    color: var(--dark-color);
+}
+
+.big{
+    font-size: 60px;
+}
+
+@media (max-width: 755px) {
+    body {background: var(--dark-color)}
+    h1 {font-size:18px; color: var(--light-color-2)}
+    h2 {font-size:16px}
+    h4 {display: none}
+    p {line-height: 1.5}
+
+    .DayTime {display: none;}
+
+    .Middle {
+        margin: 20px;
+        justify-content: flex-start;
+    }
+    .big {
+            font-size: 24px;
+            padding: 0 0 5px 10px;
+            align-content: flex-end;
+            display: inline;
+        }
+    img {
+        width: 80px;
+        margin: 20px 0 20px;
+    }
+    .rotateimg90 {
+        -webkit-transform:rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg)
+      }
+    div .Antipodal, .Chosen {text-align: right}
+    .Footer {
+        font-size: smaller;
+    }
+}

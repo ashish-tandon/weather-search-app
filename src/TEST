@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div className="App">
+        <div class="row">
+          <h1>ANTIPODE WEATHER SERVICE REACT</h1>
+          <h2>Try searching for:</h2>
+          <h2>Taipei, Madrid, Perth, or Honolulu.</h2>
+        </div>
+        <div class="row">
+        <div class="col">
+            <h2>Find the weather in...</h2>
+            <form>
+              <div>
+                <input type="text" placeholder="Enter a city name...">Placeholder</input>
+                <button class="button" aria-label="click to search"> </button>
+              </div>
+              <div>
+                <input type="text" placeholder="See local weather" disabled />
+                <button class="button" aria-label="click to search"> </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <h2 id="upsidedown-city-name">Antipode</h2>
+            <h2>
+              <span id="upsidedown-temp">Placeholder</span>
+              <span id="units">Placeholder</span>
+            </h2>
+            <div class="icon-area">
+              <span id="upsidedown-icon" class="big-icon"><i class="fa-solid fa-rainbow" />
+              </span>
+            </div>
+          </div>
+          <div class="col">
+            <span id="circlearrows"><img src="images/circlearrows.svg" alt="icon shows cities are antipodes" />
+            </span>
+          </div>
+          <div class="col">
+            <div class="row">
+              <h2>Antipode</h2>
+              <h2>
+                <span id="temp" />
+                <span id="c"><a href="#"  class="active" id="centigradeLink">°C</a></span>
+                <span id="bar"> | </span>
+                <span id="f"><a href="#" id="fahrenheitLink">°F</a></span>
+              </h2>
+              <p id="day-time">Placeholder</p>
+            </div>
+                        <div class="row">
+                                  <div class="col">
+                                    <span id="icon" class="big-icon"><i class="fa-solid fa-rainbow"></i></span>
+                                  </div>
+                                  <div class="col">
+                                            <div class="row">
+                                                    <div>
+                                                      <p id="description" style="text-transform: capitalize;">Placeholder</p>
+                                                      <p id="humidity">Placeholder</p>
+                                                      <p id="wind">Placeholder</p>
+                                                    </div>
+                                            </div>
+                                  </div>
+                        </div>
+          </div>
+          <div class="col-7" />
+          <div class="col-5" id="last-five-days">Placeholder</div>
+        </div>
+        <footer>
+          <span>This project was coded by <a href="https://www.linkedin.com/in/isabel-klint/">Isabel Klint</a> and is </span><a href="https://github.com/isabelklint/react-weather-app" target="_blank">open sourced on Github.</a>
+        </footer>
+      </div>
+</body>
+</html>
