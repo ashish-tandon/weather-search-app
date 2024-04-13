@@ -1,32 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"/>
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!-- BOOTSTRAP only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Antipode Weather React App</title>
-    <!-- FONT AWESOME   -->
-    <script src="https://kit.fontawesome.com/6a50e3be5d.js" crossorigin="anonymous"></script>
-    <!-- GOOGLE FONTS NEEDED  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-          href="https://fonts.googleapis.com/css2?family=Jaldi&display=swap"
-          rel="stylesheet"/>
-    <!-- AXIOS -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- MY CSS -->
-    <link rel="stylesheet" href="src/style.css"/>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Weather Search App</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6a50e3be5d.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jaldi&display=swap" rel="stylesheet" />
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="src/style.css" />
+  <!-- Custom JavaScript -->
+  <script src="src/app.js"></script>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Weather Search App. All rights reserved.</p>
+      <!-- Feedback button -->
+      <button class="feedback-btn" onclick="openFeedbackForm()">Provide Feedback</button>
+    </div>
+  </footer>
+  <!-- Feedback form modal -->
+  <div id="feedbackModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeFeedbackForm()">&times;</span>
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm">
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4"></textarea>
+        <button type="submit" onclick="submitFeedback()">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- JavaScript for modal functionality -->
+  <script>
+    // Function to open feedback form modal
+    function openFeedbackForm() {
+      document.getElementById("feedbackModal").style.display = "block";
+    }
 
-  </body>
+    // Function to close feedback form modal
+    function closeFeedbackForm() {
+      document.getElementById("feedbackModal").style.display = "none";
+    }
+
+    // Function to submit feedback
+    function submitFeedback() {
+      // Placeholder logic for submitting feedback
+      console.log("Feedback submitted!");
+      // You can implement actual submission logic here (e.g., send data to backend)
+      // After submission, you may want to close the modal
+      closeFeedbackForm();
+    }
+  </script>
+</body>
 </html>
