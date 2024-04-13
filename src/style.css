@@ -1,0 +1,108 @@
+/* Define CSS variables for consistent styling */
+:root {
+    --bright-dark-color: #C63F25;
+    --light-color-2: #F5F5F5 ;
+    --bright-color: #3FADA8;
+    --blast-color: #f06449;
+    --dark-color: #36382e;
+    --default-font-family: "Jaldi", sans-serif;
+}
+
+/* Set background image and text color */
+body {
+    background-image: linear-gradient(to right, var(--blast-color) 0%, var(--blast-color) 50%, var(--dark-color) 50%, var(--dark-color) 100%);
+    color: var(--light-color-2)
+}
+
+/* Global styles */
+p {
+    margin: 0;
+}
+
+/* Footer styles */
+.footer {
+    margin: 20px;
+    padding: 4px 8px;
+    position: fixed; 
+    bottom: 0;
+    background-color: var(--dark-color);
+    border: 1px solid var(--blast-color)
+}
+
+/* Feedback section styles */
+.feedback-section {
+    margin-top: 10px;
+}
+
+/* Button styles */
+button {
+    background-color: var(--bright-dark-color);
+    border: 1px solid var(--bright-dark-color);
+    padding: 6px 12px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: var(--bright-color);
+}
+
+/* Responsive styles */
+@media (max-width: 755px) {
+    body {
+        background: var(--dark-color);
+    }
+
+    h1 {
+        font-size: 18px;
+        color: var(--light-color-2);
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    /* Hide specific elements on smaller screens */
+    .DayTime {
+        display: none;
+    }
+
+    /* Adjust layout and styles for smaller screens */
+    .Middle {
+        margin: 20px;
+        justify-content: flex-start;
+    }
+
+    /* Adjust font size and padding */
+    .big {
+        font-size: 24px;
+        padding: 0 0 5px 10px;
+        align-content: flex-end;
+        display: inline;
+    }
+
+    /* Adjust image size */
+    img {
+        width: 80px;
+        margin: 20px 0 20px;
+    }
+
+    /* Rotate specific images for better display */
+    .rotateimg90 {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    /* Align text to right on smaller screens */
+    div .Antipodal, .Chosen {
+        text-align: right;
+    }
+
+    /* Adjust font size for smaller screens */
+    .Footer {
+        font-size: smaller;
+    }
+}
