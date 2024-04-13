@@ -16,8 +16,8 @@ The Weather Search App provides real-time weather updates and forecasts, offerin
 
 2. git clone https://github.com/ashish-tandon/weather-search-app
 
-2. Install dependencies: 📦
-3. 
+3. Install dependencies: 📦
+
 ## Usage 💡
 
 - Enter a location in the search bar and click the search button to retrieve weather information for that location. 🔎
