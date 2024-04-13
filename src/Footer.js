@@ -1,11 +1,24 @@
-import React from "react";
+import React from 'react';
 
-export default function Footer() {
-    return (
-      <div className="Footer">
-        <footer>
-            <span>This project was coded by Isabel Klint and is open sourced on Github.</span>
-        </footer>
+const Footer = () => {
+  // Function to handle user feedback submission
+  const handleFeedback = () => {
+    // Placeholder logic for handling user feedback submission
+    console.log('Feedback submitted!');
+    // Implement actual feedback submission logic (e.g., API call) here
+  };
+
+  return (
+    <footer className="footer">
+      <div className="footer-content">
+        <p>© 2024 Weather Search App. All rights reserved.</p>
+        <div className="feedback-section">
+          <button onClick={handleFeedback}>Provide Feedback</button>
+          {/* Add a link to a feedback form or a modal for user feedback */}
+        </div>
       </div>
-    );
-  }
+    </footer>
+  );
+};
+
+export default Footer;
